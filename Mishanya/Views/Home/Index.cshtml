@@ -1,0 +1,46 @@
+﻿@model ToursListViewModel
+
+@{ Layout = "_Layout";}
+
+
+<table class="table table-sm table-bordered">
+    <thead class="bg-primary text-white">
+        <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Duration</th>
+            <th>Transport</th>
+            <th>Price</th>
+            <th>Address</th>
+            <th>Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Tours.Count() != 0)
+            @foreach (var tour in Model.Tours)
+            {
+                <tr>
+                    <td>@tour.Name</td>
+                    <td>@tour.Date</td>
+                    <td>@tour.Duration</td>
+                    <td>@tour.Transport</td>
+                    <td>@tour.Price</td>
+                    <td>@tour.Address</td>
+                    <td>@tour.Type</td>
+                </tr>
+            }
+            else
+            {
+                <tr>
+                    <td colspan="7" class="text-center">Not Found</td>
+                </tr>
+            }
+    </tbody>
+</table>
+<form class="form-group" asp-action="Index" method="get">
+        <select class="form-control" asp-items="@new SelectList(Enum.GetNames(typeof(TripType)))" asp-for="CurrentType">
+            <option disabled selected value="">Select a Type</option>
+        </select>
+        <button class="btn btn-primary" type="submit" asp-route="">Show</button>
+    </form>
+
