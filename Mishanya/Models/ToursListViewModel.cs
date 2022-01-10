@@ -10,5 +10,6 @@ namespace Mishanya.Models
     {
         public IEnumerable<Tour> Tours { get; set; }
         public TripType CurrentType { get; set; }
+        public decimal TotalPrice { get; set; }
     }
 }

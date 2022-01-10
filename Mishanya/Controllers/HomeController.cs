@@ -25,6 +25,7 @@ namespace Mishanya.Controllers
             {
                 toursListViewModel.Tours = repository.Tours;
             }
+            toursListViewModel.TotalPrice = toursListViewModel.Tours.Sum(x => x.Price);
             return View(toursListViewModel);
         }
     }
