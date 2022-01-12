@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  mishanya:
+    image: ${DOCKER_REGISTRY-}mishanya
+    build:
+      context: .
+      dockerfile: Mishanya\Dockerfile
