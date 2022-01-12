@@ -11,7 +11,19 @@ namespace Mishanya.Controllers
     public class HomeController : Controller
     {
         private IRepository repository;
+
+        public IActionResult Index()
+        {
+            ViewData["Message"] = "Hello!";
+            return View("Index");
+        }
+       
+
         public HomeController(IRepository repository) => this.repository = repository;
+
+        public HomeController()
+        {
+        }
 
         public ViewResult Index(string currentType)
         {

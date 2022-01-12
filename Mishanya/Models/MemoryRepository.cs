@@ -21,7 +21,7 @@ namespace Mishanya.Models
             new Tour{Name = "Музей ВолгГТУ", Date = DateTime.Now, Duration = 2, Price = 100M, Transport = "Самолет", Address = "г. Волгоград", Type = TripType.Excursion },
             new Tour{Name = "Путешествие в Меловые горы", Date = DateTime.Now, Duration = 5, Price = 3000M, Transport = "Автобус", Address = "г. Иловля", Type = TripType.Tourist },
             new Tour{Name = "Спуск по Волге", Date = DateTime.Now, Duration = 12, Price = 10000M, Transport = "Теплоход", Address = "г. Нижний Новгород", Type = TripType.Cruise },
-            new Tour{Name = "Музей Минералов", Date = DateTime.Now, Duration = 2, Price = 500M, Transport = "Автобус", Address = "г. Москва", Type = TripType.Excursion },
+            //new Tour{Name = "Музей Минералов", Date = DateTime.Now, Duration = 2, Price = 500M, Transport = "Автобус", Address = "г. Москва", Type = TripType.Excursion },
 
         };
 
